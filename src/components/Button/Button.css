@@ -1,0 +1,99 @@
+.btn {
+  display: inline-block;
+  width: 158px;
+  height: 44px;
+  padding: 0;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+  text-decoration: none;
+  text-align: center;
+  color: var(--color-white-cotton);
+  border-style: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition-property: background-color, opacity;
+  transition-duration: 0.3s;
+}
+
+.btn:active {
+  opacity: 0.8;
+}
+
+.btn--disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.btn--blue-orchid {
+  background-color: var(--color-blue-orchid);
+}
+
+.btn--blue-orchid:hover {
+  background-color: #C75AF6;
+}
+
+.btn--blue {
+  background-color: var(--color-blue-fish);
+}
+
+.btn--blue:hover {
+  background-color: #7C91F9;
+}
+
+.btn--dark {
+  background-color: var(--color-dark-jewel);
+}
+
+.btn--dark:hover {
+  background-color: #656EA3;
+}
+
+.btn--red {
+  background-color: var(--color-red);
+}
+
+.btn--red:hover {
+  background-color: #E98888;
+}
+
+.btn--back {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn--back::before  {
+  content: "";
+  width: 7px;
+  height: 10px;
+  margin-right: 12px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.btn--back:hover {
+  text-decoration: underline;
+}
+
+.btn--back--light {
+  width: auto;
+  height: auto;
+  color: var(--color-dark-ocean);
+  background-color: transparent;
+}
+
+.btn--back--light::before {
+  background-image: url('../../assets/img/icon-back-light.svg');
+}
+
+.btn--back--dark {
+  height: 54px;
+  color: var(--color-white);
+  background-color: var(--color-dark-raven);
+}
+
+.btn--back--dark::before {
+  background-image: url('../../assets/img/icon-back-dark.svg');
+}

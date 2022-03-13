@@ -1,0 +1,117 @@
+.new-feedback {
+  margin-block: 100px;
+}
+
+.new-feedback__cancel-btn {
+  margin-bottom: 68px;
+}
+
+.form {
+  position: relative;
+  width: 540px;
+  padding: 42px;
+  padding-top: 52px;
+  background-color: var(--color-white);
+  border-radius: 10px;
+}
+
+.form::before {
+  content: "";
+  position: absolute;
+  top: -28px;
+  left: 42px;
+  width: 56px;
+  height: 56px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.form--post::before {
+  background-image: url("../../assets/img/icon-add.svg");
+}
+
+.form__inner {
+  margin: 0;
+  margin-bottom: 32px;
+  padding: 0;
+  border: 0;
+}
+
+.form__heading {
+  display: block;
+  margin-bottom: 40px;
+}
+
+.form__item:not(:last-of-type) {
+  margin-bottom: 24px;
+}
+
+.form__item-title {
+  margin-bottom: 2px;
+}
+
+.form__item-subtitle {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.form__item-field--textarea textarea {
+  min-height: 96px;
+}
+
+.form__end {
+  text-align: end;
+}
+
+.form__cancel-btn,
+.form__submit-btn {
+  width: auto;
+  padding: 12px 24px;
+}
+
+.form__cancel-btn {
+  margin-right: 16px;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 1000px) {
+  .new-feedback {
+    margin-block: 56px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .new-feedback {
+    margin-top: 34px;
+    margin-bottom: 77px;
+  }
+
+  .new-feedback__cancel-btn {
+    margin-bottom: 55px;
+  }
+
+  .form--post {
+    width: auto !important;
+    padding: 24px;
+    padding-top: 44px;
+  }
+
+  .form__inner {
+    margin-bottom: 40px;
+  }
+
+  .form__end {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form__cancel-btn {
+    order: 2;
+    margin-top: 16px;
+    margin-right: 0;
+  }
+}

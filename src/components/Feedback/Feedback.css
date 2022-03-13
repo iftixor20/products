@@ -1,0 +1,128 @@
+.feedback {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 28px 32px;
+  background-color: var(--color-white);
+  border-radius: 10px;
+}
+
+.feedback__upvotes {
+  margin-right: 40px;
+  align-self: flex-start;
+  flex-shrink: 0;
+  z-index: 10;
+}
+
+.feedback__inner {
+  flex-grow: 1;
+  margin-right: 20px;
+}
+
+.feedback__title {
+  margin-bottom: 4px;
+}
+
+.feedback__title-link {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s;
+}
+
+.feedback--freezed .feedback__title-link {
+  pointer-events: none;
+}
+
+.feedback__title-link:hover {
+  color: var(--color-blue-fish);
+}
+
+.feedback__title-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.feedback__desc {
+  display: -webkit-box;
+  margin-top: 0;
+  margin-bottom: 12px;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.feedback__category {
+  pointer-events: none;
+}
+
+.feedback__comments {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.feedback__comments--disabled {
+  opacity: 0.5;
+}
+
+.feedback__comments::before {
+  content: "";
+  width: 18px;
+  height: 16px;
+  margin-right: 8px;
+  background-image: url("../../assets/img/icon-comment.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 600px) {
+  .feedback {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 24px;
+  }
+
+  .feedback__upvotes {
+    order: 2;
+    flex-direction: row;
+    width: 69px;
+    height: 32px;
+    margin-right: 0;
+  }
+
+  .feedback__upvotes::before {
+    margin-bottom: 0;
+    margin-right: 10px;
+  }
+
+  .feedback__inner {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
+
+  .feedback__title {
+    margin-bottom: 9px;
+    font-size: 13px;
+    line-height: 19px;
+    letter-spacing: -0.18px;
+  }
+
+  .feedback__desc {
+    margin-bottom: 8px;
+    font-size: 13px;
+    line-height: 19px;
+  }
+
+  .feedback__comments {
+    order: 3;
+  }
+}

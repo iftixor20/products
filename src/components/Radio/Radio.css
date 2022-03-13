@@ -1,0 +1,29 @@
+.radio {
+  display: inline-flex;
+}
+
+.radio__field {
+  appearance: none;
+}
+
+.radio__label {
+  padding: 6px 16px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--color-blue-fish);
+  background-color: var(--color-white-cotton);
+  border-radius: 10px;
+  transition-property: background-color;
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+
+.radio__label:hover {
+  background-color: #CFD7FF;
+}
+
+.radio__field:checked + .radio__label {
+  color: var(--color-white);
+  background-color: var(--color-blue-fish);;
+}
